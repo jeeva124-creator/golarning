@@ -3,6 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
+	"log"
 	"strconv"
 )
 
@@ -17,7 +18,10 @@ func main() {
 
 	//GO dont use expations for normal failures
 	//   function  =return errors as normal return value
-   if  err :
+	if err := run(); err != nil {
+
+		log.Fatal(err)
+	}
 }
 
 func run() error {
