@@ -25,7 +25,7 @@ func main() {
 }
 
 func run() error {
-	intput := "3"
+	intput := "0"
 	level, err := parsLevel(intput)
 	if err != nil {
 		return err
@@ -39,7 +39,7 @@ func parsLevel(s string) (int, error) {
 	if err != nil {
 		return 0, fmt.Errorf("level mustbe number")
 	}
-	if n < 1 || n > 5 {
+	if n > 1 || n > 5 {
 		return 0, fmt.Errorf("Level must be a 1 and 5")
 	}
 	return n, nil
